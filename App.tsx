@@ -3,23 +3,24 @@ import {Button, View} from 'react-native';
 import '@walletconnect/react-native-compat';
 import {
   useWalletConnectModal,
-  WalletConnectModal,
-} from '@walletconnect/modal-react-native';
+} from '@spinamp/walletconnect-react-native';
 
 import {providerMetadata} from './WalletConnectModal';
+import { WalletConnectComponent } from './wc-ui/WalletConnectComponent';
+
+const config = {
+  projectId:'PROJECT_ID',
+  providerMetadata: providerMetadata
+}
 
 const App = () => {
-  const {open} = useWalletConnectModal();
+  const {recommendedWallets} = useWalletConnectModal(config);
 
   return (
     <>
-      <WalletConnectModal
-        projectId={'04052d4d89dc7ad8240fa0565cb37213'}
-        providerMetadata={providerMetadata}
+      <WalletConnectComponent
+        recommendedWallets={recommendedWallets}
       />
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Button title="Press me" onPress={open} />
-      </View>
     </>
   );
 };

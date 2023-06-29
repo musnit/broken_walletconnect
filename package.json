@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.18.1",
+    "@spinamp/walletconnect-react-native": "^1.0.0",
     "@walletconnect/encoding": "1.0.2",
-    "@walletconnect/modal-react-native": "1.0.0-rc.3",
+    "@walletconnect/react-native-compat": "^2.8.6",
     "react": "18.2.0",
     "react-native": "0.72.0",
     "react-native-get-random-values": "1.9.0",
